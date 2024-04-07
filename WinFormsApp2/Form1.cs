@@ -10,7 +10,7 @@ namespace WinFormsApp2
         }
         public class Logic
         {
-            public static string delSymb(string str)
+            public static string delSymb(string str)//удаление лишних символов
             {
                 str = str.Replace(" ", String.Empty);
                 str = str.Replace(",", String.Empty);
@@ -19,7 +19,7 @@ namespace WinFormsApp2
                 str = str.ToLower();
                 return str;
             }
-            public static int searchNeigh(string str)
+            public static int searchNeigh(string str)//поиск соседей
             {
                 var count = 0;
                 for (int i = 0; i < str.Length - 1; i++)
@@ -31,7 +31,7 @@ namespace WinFormsApp2
                 }
                 return count;
             }
-            public static int exam(string str)
+            public static int exam(string str)//счётчик предложений
             {
                 var count = 0;
                 for (int i = 0; i < str.Length; i++)
@@ -45,7 +45,7 @@ namespace WinFormsApp2
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//запуск основной программы
         {
 
             string str;
@@ -74,12 +74,12 @@ namespace WinFormsApp2
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//вывод задания
         {
             MessageBox.Show("Дано предложение. Определить, сколько в нем одинаковых соседних букв. Пробелы не учитывать.", "Задание", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        private void Form1_KeyUp(object sender, KeyEventArgs e)//переход через enter
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -87,7 +87,7 @@ namespace WinFormsApp2
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)//очистка формы
         {
             textBox1.Text = "";
             label2.Text = "";
